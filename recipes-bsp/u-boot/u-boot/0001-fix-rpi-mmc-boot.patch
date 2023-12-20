@@ -1,0 +1,20 @@
+From 753df09e954f4d984470dec5b5ad37f31194059a Mon Sep 17 00:00:00 2001
+From: Nathan Rignall <nathan@yocto.orion>
+Date: Wed, 20 Dec 2023 13:12:37 +0000
+Subject: [PATCH] fix rpi mmc boot
+Upstream-Status: Pending
+
+---
+ board/raspberrypi/rpi/rpi.env | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/board/raspberrypi/rpi/rpi.env b/board/raspberrypi/rpi/rpi.env
+index 30228285ed..02210b97b5 100644
+--- a/board/raspberrypi/rpi/rpi.env
++++ b/board/raspberrypi/rpi/rpi.env
+@@ -74,4 +74,4 @@ pxefile_addr_r=0x02500000
+ fdt_addr_r=0x02600000
+ ramdisk_addr_r=0x02700000
+ 
+-boot_targets=mmc usb pxe dhcp
++boot_targets=mmc0 mmc1 mmc2 usb pxe dhcp
